@@ -1,0 +1,6 @@
+{
+  "name": "Bounti Executive Pitch & Growth Dashboard",
+  "description": "Interactive executive pitch deck, strategic growth dashboard (territory map, war room simulator, competitor matrix, target account generator, 90-day plan), candidate CV with 6-axis radar, and AI chat assistant for Bounti leadership.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
