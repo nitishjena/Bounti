@@ -126,7 +126,7 @@ export const PitchDeckSection: React.FC<PitchDeckSectionProps> = ({
           </button>
         </div>
 
-        {/* Right: Speaker Notes & Export Actions */}
+        {/* Right: Actions */}
         <div className="flex items-center gap-2">
           {/* Modeler Drawer Toggle */}
           <button
@@ -139,37 +139,6 @@ export const PitchDeckSection: React.FC<PitchDeckSectionProps> = ({
           >
             <Sliders className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Funnel Modeler</span>
-          </button>
-
-          {/* Speaker Notes Toggle */}
-          <button
-            onClick={() => setShowSpeakerNotes(!showSpeakerNotes)}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border font-medium transition ${
-              showSpeakerNotes 
-                ? 'bg-purple-600 text-white border-purple-400 font-bold' 
-                : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'
-            }`}
-          >
-            <FileText className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Speaker Notes</span>
-          </button>
-
-          <button
-            onClick={handleCopySlideText}
-            className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition"
-            title="Copy Slide Content"
-          >
-            {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-          </button>
-
-          <button
-            onClick={handleExportPng}
-            disabled={isExporting}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition shadow-sm disabled:opacity-50"
-            title="Export Slide as PNG"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span className="hidden md:inline">Export HD</span>
           </button>
         </div>
       </div>

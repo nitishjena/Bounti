@@ -56,7 +56,7 @@ export const CandidateCVSection: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left z-10">
           <div className="w-24 h-24 rounded-2xl bg-slate-900 border-2 border-emerald-500 overflow-hidden flex items-center justify-center font-black text-2xl text-white shadow-md relative shrink-0">
             <span>NJ</span>
-            <span className="absolute bottom-1 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+            <span className="absolute bottom-1 right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-slate-900 rounded-full" title="Available immediately"></span>
           </div>
 
           <div className="space-y-1.5">
