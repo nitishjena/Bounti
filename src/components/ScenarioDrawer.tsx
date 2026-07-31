@@ -251,6 +251,9 @@ export const ScenarioDrawer: React.FC<ScenarioDrawerProps> = ({
             onChange={(e) => setScenario((prev) => ({ ...prev, salesCycleDays: Number(e.target.value) }))}
             className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-slate-400"
           />
+          <p className="text-[10px] text-slate-400 mt-1 italic">
+            Assumption. Multi-location deals typically run pilot-then-rollout, so I'd expect 6–12 weeks.
+          </p>
         </div>
 
       </div>

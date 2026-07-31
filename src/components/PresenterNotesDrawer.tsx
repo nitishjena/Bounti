@@ -26,15 +26,15 @@ export const PresenterNotesDrawer: React.FC<PresenterNotesDrawerProps> = ({
   const scriptText = `
 "Slide 8: GTM Outbound Engine & SDR Velocity
 
-Now let's look at Bounti's Go-To-Market unit economics from our SDR perspective.
+Now let's look at Bounti's Go-To-Market unit economics from my quota perspective.
 
 Our outbound campaign is built on a high-velocity, rigorous sales model:
-1. TOP OF FUNNEL: We start with 2,500 outbound calls per SDR cycle — representing 100 disciplined dials per day.
-2. SDR HOOK RATE: From 2,500 calls, Bounti generates 200 qualified product discovery demos. That's an 8% call-to-demo conversion rate, powered by Bounti's autonomous account research prior to every dial.
+1. TOP OF FUNNEL: ~16,500 dials per year (~75 dials/day, or ~50 when multi-channel at 15% connect rate).
+2. CONNECT TO DEMO RATE: From ~2,500 connects per year, we generate 200 qualified demos (4/week). That's an 8% demo-per-connect rate.
 3. CLOSING WIN RATE: Our Account Executives convert 200 demos into 50 closed-won contracts — achieving a 25% demo-to-deal win rate.
-4. REVENUE IMPACT: With an average deal size of €6,000 ACV, this single SDR funnel yields €300,000 in ARR with an average sales cycle velocity of just 21 days from initial cold touch to signed contract.
+4. REVENUE IMPACT: At an assumed €6,000 ACV baseline, this single rep quota yields €300,000 in ARR with an average sales cycle of 45 days.
 
-In summary: 2.0% end-to-end efficiency turns cold dials into predictable €300K ARR scale."
+In summary: 200 qualified demos per year converts into predictable €300K ARR."
   `.trim();
 
   const handleCopyScript = () => {

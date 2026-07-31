@@ -156,6 +156,7 @@ export const PitchDeckSection: React.FC<PitchDeckSectionProps> = ({
             scenario={scenario}
             theme={theme}
             setScenario={setScenario}
+            onOpenModeler={() => setShowScenarioDrawer(true)}
           />
         </div>
 

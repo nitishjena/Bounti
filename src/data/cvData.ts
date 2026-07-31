@@ -57,7 +57,7 @@ export const SKILL_DIMENSIONS: SkillDimension[] = [
     nishValue: 90,
     baselineValue: 65,
     shortCode: 'CLOSE',
-    proofMetrics: '21-Day Sales Cycle • €300K ARR / Rep Sourced Pipeline',
+    proofMetrics: '45-Day Sales Cycle • €300K ARR / Rep Sourced Pipeline',
     details: 'Full-cycle experience owning discovery, qualification, product demos, objection handling, and contract signing directly with senior decision-makers.',
     keyProjects: ['TenantTrust C-Suite Demos', 'OneSpaWorld Monthly Acquisition Quota']
   }

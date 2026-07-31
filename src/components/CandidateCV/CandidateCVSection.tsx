@@ -2,50 +2,17 @@ import React, { useState } from 'react';
 import { SKILL_DIMENSIONS, EXPERIENCE_TIMELINE } from '../../data/cvData';
 import { SkillDimension } from '../../types';
 import { 
-  User, 
   Mail, 
   Phone, 
   MapPin, 
-  GraduationCap, 
-  Globe2, 
   Award, 
-  Target, 
   CheckCircle2, 
-  Sparkles, 
-  FileText,
   Briefcase,
-  ChevronRight,
-  TrendingUp,
-  Cpu
+  Layers
 } from 'lucide-react';
-import { BountiLogo } from '../BountiLogo';
 
 export const CandidateCVSection: React.FC = () => {
   const [selectedSkill, setSelectedSkill] = useState<SkillDimension>(SKILL_DIMENSIONS[0]);
-
-  // SVG Radar Chart Math Constants
-  const cx = 150;
-  const cy = 150;
-  const radius = 100;
-  const totalAxes = SKILL_DIMENSIONS.length;
-
-  const getCoordinates = (index: number, value: number) => {
-    const angle = (Math.PI * 2 / totalAxes) * index - Math.PI / 2;
-    const r = (value / 100) * radius;
-    const x = cx + r * Math.cos(angle);
-    const y = cy + r * Math.sin(angle);
-    return { x, y };
-  };
-
-  const nishPoints = SKILL_DIMENSIONS.map((dim, i) => {
-    const { x, y } = getCoordinates(i, dim.nishValue);
-    return `${x},${y}`;
-  }).join(' ');
-
-  const baselinePoints = SKILL_DIMENSIONS.map((dim, i) => {
-    const { x, y } = getCoordinates(i, dim.baselineValue);
-    return `${x},${y}`;
-  }).join(' ');
 
   return (
     <div className="w-full max-w-7xl mx-auto space-y-8 font-sans">
@@ -63,7 +30,7 @@ export const CandidateCVSection: React.FC = () => {
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
               <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">NISH JENA</h2>
               <span className="px-3 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-mono font-bold text-xs border border-emerald-200">
-                GTM Lead & Outbound Engine Builder
+                SDR / Growth Associate Candidate
               </span>
             </div>
 
@@ -95,114 +62,59 @@ export const CandidateCVSection: React.FC = () => {
 
       </div>
 
-      {/* 6-Axis Dual-Overlay Skills Radar & Detail Inspector */}
+      {/* 6 Skill Dimensions & Evidence Panel */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         
-        {/* Radar Chart Canvas (Left) */}
-        <div className="p-6 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl flex flex-col items-center justify-between space-y-4">
-          <div className="w-full flex items-center justify-between border-b border-slate-800 pb-3">
+        {/* Skill Dimensions Grid (Left) */}
+        <div className="p-6 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800 pb-3">
             <div>
-              <span className="text-xs font-mono text-emerald-400 font-bold uppercase">6-AXIS HYBRID SKILLS RADAR</span>
-              <h3 className="text-base font-bold text-white mt-0.5">Nish Jena vs. Traditional SDR Baseline</h3>
+              <span className="text-xs font-mono text-emerald-400 font-bold uppercase">CORE COMPETENCIES</span>
+              <h3 className="text-base font-bold text-white mt-0.5 flex items-center gap-2">
+                <Layers className="w-4 h-4 text-emerald-400" />
+                Six GTM Execution Dimensions
+              </h3>
             </div>
           </div>
 
-          <div className="relative w-[300px] h-[300px] flex items-center justify-center my-2">
-            <svg width="300" height="300" className="overflow-visible">
-              {[0.2, 0.4, 0.6, 0.8, 1.0].map((level) => (
-                <circle
-                  key={level}
-                  cx={cx}
-                  cy={cy}
-                  r={radius * level}
-                  fill="none"
-                  stroke="#334155"
-                  strokeDasharray="2,2"
-                  strokeWidth="1"
-                />
-              ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {SKILL_DIMENSIONS.map((dim) => {
+              const isSelected = selectedSkill.id === dim.id;
 
-              {SKILL_DIMENSIONS.map((dim, i) => {
-                const { x, y } = getCoordinates(i, 100);
-                const isSelected = selectedSkill.id === dim.id;
-
-                return (
-                  <g key={dim.id}>
-                    <line x1={cx} y1={cy} x2={x} y2={y} stroke="#334155" strokeWidth="1" />
-                    <text
-                      x={x + (x > cx ? 12 : x < cx ? -12 : 0)}
-                      y={y + (y > cy ? 12 : y < cy ? -12 : 0)}
-                      textAnchor="middle"
-                      dominantBaseline="middle"
-                      onClick={() => setSelectedSkill(dim)}
-                      className={`text-[10px] font-mono font-bold cursor-pointer transition-all ${
-                        isSelected ? 'fill-emerald-400 underline font-extrabold text-xs' : 'fill-slate-400 hover:fill-white'
-                      }`}
-                    >
-                      {dim.shortCode}
-                    </text>
-                  </g>
-                );
-              })}
-
-              <polygon
-                points={baselinePoints}
-                fill="rgba(148, 163, 184, 0.15)"
-                stroke="#94a3b8"
-                strokeWidth="1.5"
-                strokeDasharray="3,3"
-              />
-
-              <polygon
-                points={nishPoints}
-                fill="rgba(16, 185, 129, 0.3)"
-                stroke="#10b981"
-                strokeWidth="2.5"
-                className="transition-all duration-500 hover:fill-emerald-500/40"
-              />
-
-              {SKILL_DIMENSIONS.map((dim, i) => {
-                const { x, y } = getCoordinates(i, dim.nishValue);
-                const isSelected = selectedSkill.id === dim.id;
-
-                return (
-                  <circle
-                    key={dim.id}
-                    cx={x}
-                    cy={y}
-                    r={isSelected ? 6 : 4}
-                    fill={isSelected ? '#34d399' : '#10b981'}
-                    stroke="#ffffff"
-                    strokeWidth="2"
-                    onClick={() => setSelectedSkill(dim)}
-                    className="cursor-pointer transition-all hover:scale-125"
-                  />
-                );
-              })}
-            </svg>
-          </div>
-
-          <div className="flex items-center gap-6 text-xs font-mono">
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-emerald-500 rounded-sm"></span>
-              <span className="text-emerald-300 font-bold">Nish Jena Profile</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-slate-400 rounded-sm"></span>
-              <span className="text-slate-400">Traditional SDR Baseline</span>
-            </div>
+              return (
+                <button
+                  key={dim.id}
+                  onClick={() => setSelectedSkill(dim)}
+                  className={`p-4 rounded-2xl text-left border transition-all duration-200 ${
+                    isSelected
+                      ? 'bg-slate-800 text-white border-emerald-500 shadow-md ring-2 ring-emerald-500/30'
+                      : 'bg-slate-950/80 text-slate-300 border-slate-800 hover:border-slate-700 hover:text-white'
+                  }`}
+                >
+                  <span className={`text-[10px] font-mono font-bold uppercase block ${isSelected ? 'text-emerald-400' : 'text-slate-500'}`}>
+                    {dim.shortCode}
+                  </span>
+                  <h4 className="text-xs font-bold mt-1 line-clamp-2 leading-snug">
+                    {dim.name}
+                  </h4>
+                  <p className="text-[10px] text-slate-400 font-mono mt-2 truncate">
+                    {dim.proofMetrics}
+                  </p>
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* Selected Skill Detail Inspector */}
+        {/* Selected Skill Detail Inspector (Right) */}
         <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between border-b border-slate-200 pb-3">
               <span className="text-xs font-mono text-emerald-700 font-bold uppercase">
-                SKILL DIMENSION INSPECTOR
+                SKILL DIMENSION EVIDENCE
               </span>
               <span className="text-xs font-mono font-bold text-slate-500">
-                Score: {selectedSkill.nishValue} / 100
+                Proven Track Record
               </span>
             </div>
 
@@ -232,7 +144,7 @@ export const CandidateCVSection: React.FC = () => {
           </div>
 
           <div className="pt-2 border-t border-slate-200 text-xs text-slate-400 font-mono">
-            Click any dimension on the radar chart to inspect proof metrics.
+            Select any dimension on the left to inspect evidence and proof metrics.
           </div>
         </div>
 

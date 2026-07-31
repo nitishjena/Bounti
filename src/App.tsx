@@ -12,7 +12,7 @@ const DEFAULT_BOUNTI_SCENARIO: ScenarioModel = {
   callToDemoRate: 8.0,
   demoToDealRate: 25.0,
   avgDealSize: 6000,
-  salesCycleDays: 21,
+  salesCycleDays: 45,
   sdrCount: 1,
   workingDays: 25,
 };

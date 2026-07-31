@@ -37,9 +37,10 @@ interface SlideViewProps {
   scenario: ScenarioModel;
   theme: SlideTheme;
   setScenario?: (fn: (prev: ScenarioModel) => ScenarioModel) => void;
+  onOpenModeler?: () => void;
 }
 
-export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, theme }) => {
+export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, theme, onOpenModeler }) => {
   const isLight = theme === 'bounti-light';
 
   // Active channel tab for Slide 12 multi-channel openers
@@ -426,7 +427,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                   QSR & Franchise Chains
                 </h4>
-                <p className={`text-[11px] ${subTextColor} mt-0.5`}>Regional pizza, burger, and bakery franchises expanding past 10 sites (World of Pizza profile).</p>
+                <p className={`text-[11px] ${subTextColor} mt-0.5`}>Corporate-owned multi-site operators like Honest Burgers (~51 sites, converting 12 acquired GBK locations) and franchise systems like Camile Thai, where the largest franchisee runs 10 outlets and the buying decision splits between HQ and the operator.</p>
               </div>
               <div className={`p-2.5 rounded-xl ${cardBg} border`}>
                 <h4 className={`text-xs font-bold ${headingColor} flex items-center gap-1.5`}>
@@ -571,12 +572,18 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
               <p className="font-semibold italic leading-relaxed">
                 "€6K is my assumption, not their number. I couldn't find published pricing. If the real ACV is €15K, this same funnel produces €750K — the model recalculates live."
               </p>
-              <button 
-                onClick={onOpenModeler}
-                className="mt-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer"
-              >
-                Change the ACV yourself →
-              </button>
+              {onOpenModeler ? (
+                <button 
+                  onClick={onOpenModeler}
+                  className="mt-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer"
+                >
+                  Open the Funnel Modeler to change this assumption →
+                </button>
+              ) : (
+                <p className="mt-2 text-xs font-semibold text-slate-500 font-mono">
+                  Open the Funnel Modeler to change this assumption.
+                </p>
+              )}
             </div>
 
             <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block font-bold">COST-PER-LEAD BREAKDOWN INFOGRAPHIC</span>
@@ -586,8 +593,8 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
                 <span className="text-[10px] text-slate-500 block">CPL</span>
               </div>
               <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
-                <span className="text-base font-bold text-emerald-600 dark:text-emerald-400 block">20%</span>
-                <span className="text-[10px] text-slate-500 block">Lead → SQL</span>
+                <span className="text-base font-bold text-emerald-600 dark:text-emerald-400 block">8.0%</span>
+                <span className="text-[10px] text-slate-500 block">Connect → Demo</span>
               </div>
               <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
                 <span className="text-base font-bold text-emerald-600 dark:text-emerald-400 block">€1,000</span>
@@ -633,9 +640,9 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
         id: 'audit',
         title: 'Failed / Warning Audit',
         icon: AlertTriangle,
-        source: 'Public Food Safety & Health Audits',
-        signal: 'Hygiene rating drop or safety inspection warning',
-        impact: 'Compliance risk forces immediate adoption of mandatory digital checklists & proof of training.',
+        source: 'UK FSA Food Hygiene Rating Scheme — public, searchable, per-site.',
+        signal: 'Any site in a chain drops below a 4 rating.',
+        impact: 'A public rating drop is a board-level problem. Digital checklists and provable training records are the fastest defensible fix — and unlike Germany, this data is public in the UK, so I can find it before the chain calls anyone.',
         badge: 'URGENT COMPLIANCE'
       },
       {
@@ -937,7 +944,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
               </div>
 
               <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-700 dark:text-emerald-300">
-                <strong>Multi-touch synergy:</strong> Combining phone + LinkedIn + email increases connect rate by 3.2x compared to email alone.
+                Phone plus LinkedIn plus email materially lifts connect rate over email alone — I'd measure the actual multiplier in month one rather than assume it.
               </div>
             </div>
           </div>
@@ -963,7 +970,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
             <div className={`p-3.5 rounded-xl ${cardBg} border space-y-1.5`}>
               <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400">WEEK 4–6</span>
               <h4 className={`text-xs md:text-sm font-bold ${headingColor}`}>OUTBOUND SOLO</h4>
-              <p className={`text-xs ${subTextColor}`}>Launch Apollo sequences, 12+ calls/day. Add LinkedIn touch. Report weekly: connect rate, stall points.</p>
+              <p className={`text-xs ${subTextColor}`}>Launch Apollo sequences, 75 dials/day, ~50 when multi-channel. Add LinkedIn touch. Report weekly: connect rate, stall points.</p>
             </div>
             <div className={`p-3.5 rounded-xl ${cardBg} border space-y-1.5`}>
               <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400">WEEK 7–9</span>

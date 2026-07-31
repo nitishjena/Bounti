@@ -21,7 +21,7 @@ interface EnglishTerritoryAnalysis {
   flag: string;
   tam: string;
   targetChainsCount: number;
-  marketFitScore: number; // 1-100
+  fitRating: string; // "High" | "Medium" | "Low"
   primaryDrivers: string[];
   keyLogos: string[];
   playbookStrategy: string;
@@ -32,15 +32,15 @@ const ENGLISH_TERRITORY_SCAN: EnglishTerritoryAnalysis[] = [
   {
     region: "United Kingdom & Ireland",
     flag: "🇬🇧 🇮🇪",
-    tam: "€1.4M ARR",
-    targetChainsCount: 420,
-    marketFitScore: 96,
+    tam: "TAM modelled in the Funnel Modeler",
+    targetChainsCount: 1200,
+    fitRating: "High",
     primaryDrivers: [
       "Strict FSA Food Hygiene & Safety Audits across multi-unit QSR",
       "Massive annual frontline turnover (65%-80%) requiring instant AI onboarding",
       "Rapidly expanding fitness chains & grab-and-go food concepts"
     ],
-    keyLogos: ["Pret A Manger", "Greggs", "Leon", "Nando's UK", "The Gym Group", "PureGym", "Coffee#1", "Gail's Bakery"],
+    keyLogos: ["Honest Burgers", "Boojum", "Camile Thai", "Tortilla", "Itsu", "Gail's Bakery"],
     playbookStrategy: "Trigger on new site expansion & 'Area Ops Manager' job listings. Lead with instant WhatsApp/Appless training + automated food safety compliance.",
     turnoverPainPoint: "72% staff turnover in UK QSR means location managers spend 15+ hrs/week re-training new hires on basic prep & hygiene."
   },
@@ -49,7 +49,7 @@ const ENGLISH_TERRITORY_SCAN: EnglishTerritoryAnalysis[] = [
     flag: "🇸🇪 🇩🇰 🇳🇴 🇫🇮",
     tam: "€950K ARR",
     targetChainsCount: 280,
-    marketFitScore: 94,
+    fitRating: "High",
     primaryDrivers: [
       "Near-100% English proficiency across corporate, area managers, and store leads",
       "High labor costs drive extreme demand for operational efficiency & AI automation",
@@ -64,7 +64,7 @@ const ENGLISH_TERRITORY_SCAN: EnglishTerritoryAnalysis[] = [
     flag: "🇳🇱 🇧🇪 🇱🇺",
     tam: "€750K ARR",
     targetChainsCount: 190,
-    marketFitScore: 90,
+    fitRating: "Medium",
     primaryDrivers: [
       "International airport, railway & transit station concession operators",
       "Multilingual frontline teams requiring English-first standardized training",
@@ -79,7 +79,7 @@ const ENGLISH_TERRITORY_SCAN: EnglishTerritoryAnalysis[] = [
     flag: "🇵🇱 🇨🇿 🇷🇴",
     tam: "€600K ARR",
     targetChainsCount: 150,
-    marketFitScore: 88,
+    fitRating: "Low",
     primaryDrivers: [
       "Large master franchise operators running 50+ US/UK food & retail sites in CEE",
       "English used as official corporate & operational management language",
@@ -109,7 +109,7 @@ export const TerritoryMapTab: React.FC = () => {
             </h3>
           </div>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl">
-            Live web intelligence scanning Bounti's active DACH coverage alongside high-growth English market whitespace opportunities across Europe.
+            Desk research on Bounti's current coverage and English-market whitespace. Figures are my estimates, not Bounti data.
           </p>
         </div>
 
@@ -146,23 +146,11 @@ export const TerritoryMapTab: React.FC = () => {
         <div className="space-y-6">
           
           {/* Top English TAM Summary Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
-              <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">COMBINED ENGLISH TAM</span>
-              <div className="text-2xl font-black text-slate-900 font-mono mt-0.5">€3.70M ARR</div>
-              <span className="text-[11px] text-emerald-700 font-semibold font-mono mt-1 block">1,040+ Target Multi-Site Chains</span>
-            </div>
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
               <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">TOP EXPANSION MARKET</span>
-              <div className="text-2xl font-black text-slate-900 font-mono mt-0.5">UK & Ireland 🇬🇧</div>
-              <span className="text-[11px] text-slate-500 font-mono mt-1 block">€1.40M TAM · 420 Chains</span>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
-              <span className="text-[10px] font-mono font-bold text-slate-400 uppercase">FASTEST TECH ADOPTION</span>
-              <div className="text-2xl font-black text-slate-900 font-mono mt-0.5">Nordic Region 🇸🇪</div>
-              <span className="text-[11px] text-emerald-700 font-semibold font-mono mt-1 block">94/100 Market Fit Score</span>
+              <div className="text-2xl font-black text-slate-900 font-mono mt-0.5">UK & Ireland 🇬🇧 🇮🇪</div>
+              <span className="text-[11px] text-slate-500 font-mono mt-1 block">~1,200 chains / TAM modelled in the Funnel Modeler</span>
             </div>
 
             <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
@@ -199,7 +187,7 @@ export const TerritoryMapTab: React.FC = () => {
                       <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${
                         isSelected ? 'bg-emerald-500 text-slate-950' : 'bg-slate-100 text-slate-800'
                       }`}>
-                        FIT SCORE {scan.marketFitScore}/100
+                        FIT RATING: {scan.fitRating.toUpperCase()}
                       </span>
                     </div>
 
@@ -207,7 +195,7 @@ export const TerritoryMapTab: React.FC = () => {
                     
                     <div className="flex items-center justify-between text-xs mt-2 pt-2 border-t border-slate-200/40 font-mono">
                       <span className={isSelected ? 'text-slate-300' : 'text-slate-500'}>TAM: <strong>{scan.tam}</strong></span>
-                      <span className={isSelected ? 'text-slate-300' : 'text-slate-500'}>{scan.targetChainsCount} Chains</span>
+                      <span className={isSelected ? 'text-slate-300' : 'text-slate-500'}>~{scan.targetChainsCount} Chains</span>
                     </div>
                   </button>
                 );
@@ -226,7 +214,7 @@ export const TerritoryMapTab: React.FC = () => {
                     </h3>
                   </div>
                   <p className="text-xs text-emerald-700 font-mono font-bold mt-1">
-                    Market Fit Rating: {selectedEnglishRegion.marketFitScore} / 100 • Estimated TAM: {selectedEnglishRegion.tam}
+                    Market Fit Rating: {selectedEnglishRegion.fitRating} • Estimated TAM: {selectedEnglishRegion.tam}
                   </p>
                 </div>
 

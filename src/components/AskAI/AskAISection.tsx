@@ -8,7 +8,7 @@ export const AskAISection: React.FC = () => {
     {
       id: 'msg-1',
       sender: 'nish',
-      text: "Hello Deniz, Ziar, and the Bounti leadership team! I'm Nish Jena's AI Assistant, primed with my full CV, GTM strategy, pitch deck math, and 60-day wager.\n\nAsk me anything about my outbound execution plan, how I compare to traditional hires, or my strategy to turn frontline ops into €2M+ ARR for Bounti!",
+      text: "Hi — I'm an AI assistant primed on Nish's CV, GTM strategy and 60-day plan for Bounti. Ask me anything about the outbound motion, the funnel math, or the first 90 days.",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -73,7 +73,7 @@ export const AskAISection: React.FC = () => {
       const fallbackMsg: ChatMessage = {
         id: `msg-${Date.now() + 1}`,
         sender: 'nish',
-        text: "Target: 10+ Sales Qualified Leads in 60 days. I carry the quota, not excuses. Let's build Bounti's outbound engine together!",
+        text: "Target: 10+ qualified demos booked in 60 days. I carry the quota, not excuses. Let's build Bounti's outbound engine together!",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages((prev) => [...prev, fallbackMsg]);
@@ -143,7 +143,7 @@ export const AskAISection: React.FC = () => {
                   : 'bg-slate-950 border border-slate-800 text-slate-100 rounded-tl-none shadow-md'
               }`}>
                 <div className="flex items-center justify-between gap-4 mb-1 text-[10px] opacity-70 font-mono">
-                  <strong>{msg.sender === 'user' ? 'Reviewer' : 'Nish Jena (AI)'}</strong>
+                  <strong>{msg.sender === 'user' ? 'You' : 'Nish Jena (AI)'}</strong>
                   <span>{msg.timestamp}</span>
                 </div>
                 <div>{msg.text}</div>
