@@ -78,10 +78,28 @@ export const ScenarioDrawer: React.FC<ScenarioDrawerProps> = ({
           >
             <div className="font-semibold text-cyan-300 flex items-center gap-1">
               <Sparkles className="w-3 h-3 text-cyan-400" />
-              Bounti Base Case
+              My Assumption (€6K ACV)
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
-              2.5K calls → €300K ARR
+              200 Demos → €300K ARR
+            </div>
+          </button>
+
+          <button
+            onClick={() => handleApplyPreset({
+              calls: 2500,
+              callToDemoRate: 8.0,
+              demoToDealRate: 25.0,
+              avgDealSize: 15000,
+            })}
+            className="text-left p-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-xs transition"
+          >
+            <div className="font-semibold text-emerald-300 flex items-center gap-1">
+              <Euro className="w-3 h-3 text-emerald-400" />
+              If ACV is €15K
+            </div>
+            <div className="text-[10px] text-slate-400 mt-0.5">
+              200 Demos → €750K ARR
             </div>
           </button>
 
@@ -94,30 +112,12 @@ export const ScenarioDrawer: React.FC<ScenarioDrawerProps> = ({
             })}
             className="text-left p-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-xs transition"
           >
-            <div className="font-semibold text-emerald-300 flex items-center gap-1">
-              <Zap className="w-3 h-3 text-emerald-400" />
+            <div className="font-semibold text-indigo-300 flex items-center gap-1">
+              <Zap className="w-3 h-3 text-indigo-400" />
               AI SDR Boost (+50%)
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
-              12% Call-to-Demo → €450K
-            </div>
-          </button>
-
-          <button
-            onClick={() => handleApplyPreset({
-              calls: 2500,
-              callToDemoRate: 8.0,
-              demoToDealRate: 20.0,
-              avgDealSize: 12000,
-            })}
-            className="text-left p-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-xs transition"
-          >
-            <div className="font-semibold text-indigo-300 flex items-center gap-1">
-              <Euro className="w-3 h-3 text-indigo-400" />
-              Mid-Market (€12K ACV)
-            </div>
-            <div className="text-[10px] text-slate-400 mt-0.5">
-              40 Deals → €480K ARR
+              12% Demo/Connect → €450K
             </div>
           </button>
 
@@ -136,7 +136,7 @@ export const ScenarioDrawer: React.FC<ScenarioDrawerProps> = ({
               Scale Team (3 SDRs)
             </div>
             <div className="text-[10px] text-slate-400 mt-0.5">
-              7.5K calls → €900K ARR
+              7.5K connects → €900K ARR
             </div>
           </button>
 
@@ -151,10 +151,10 @@ export const ScenarioDrawer: React.FC<ScenarioDrawerProps> = ({
           <div className="flex justify-between items-center text-xs mb-1">
             <span className="text-slate-300 font-medium flex items-center gap-1.5">
               <PhoneCall className="w-3.5 h-3.5 text-cyan-400" />
-              Outreach Calls Target
+              Outreach Connects Target (15% rate)
             </span>
             <span className="font-mono font-bold text-cyan-400">
-              {scenario.calls.toLocaleString()} calls
+              {scenario.calls.toLocaleString()} connects (~{Math.round(scenario.calls / 0.15).toLocaleString()} dials)
             </span>
           </div>
           <input
@@ -168,12 +168,12 @@ export const ScenarioDrawer: React.FC<ScenarioDrawerProps> = ({
           />
         </div>
 
-        {/* Slider 2: Call to Demo % */}
+        {/* Slider 2: Demo per Connect % */}
         <div>
           <div className="flex justify-between items-center text-xs mb-1">
             <span className="text-slate-300 font-medium flex items-center gap-1.5">
               <Calendar className="w-3.5 h-3.5 text-sky-400" />
-              Call-to-Demo Conversion
+              Demo per Connect Rate
             </span>
             <span className="font-mono font-bold text-sky-400">
               {scenario.callToDemoRate.toFixed(1)}% ({demos} demos)

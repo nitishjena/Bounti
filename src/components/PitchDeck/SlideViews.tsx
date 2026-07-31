@@ -70,11 +70,11 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
               International growth motion prepared for Bounti
             </p>
             <h1 className={`text-2xl sm:text-3xl md:text-4xl font-extrabold ${headingColor} tracking-tight leading-tight`}>
-              Turn Frontline Ops Into <br />
-              <span className="text-emerald-600 dark:text-emerald-400">€2M+ ARR</span>
+              200 Qualified Demos. <br />
+              <span className="text-emerald-600 dark:text-emerald-400">Every Year.</span>
             </h1>
             <p className={`text-xs md:text-sm ${subTextColor} leading-relaxed max-w-lg`}>
-              A trigger-based outbound engine calibrated to <strong className={accentTeal}>€300K ARR per rep</strong> from <strong className={headingColor}>2,500 cold touches</strong> at 2.0% end-to-end deal velocity, the exact motion that closed World of Pizza and Concept Family.
+              A trigger-based engine built backwards from 4 demos a week across ~1,200 named UK and Ireland chains — sized to the market, not to a dial target.
             </p>
           </div>
 
@@ -106,8 +106,8 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
               <Trophy className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             </div>
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 block">PROVEN CASES</span>
-              <span className={`text-xs md:text-sm font-bold ${headingColor} block mt-0.5`}>World of Pizza, Concept Family</span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 block">BOUNTI'S PROOF</span>
+              <span className={`text-xs md:text-sm font-bold ${headingColor} block mt-0.5`}>World of Pizza, Concept Family, Kaimug</span>
             </div>
           </div>
 
@@ -116,8 +116,8 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
               <Target className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             </div>
             <div>
-              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 block">ICP TARGET</span>
-              <span className={`text-xs md:text-sm font-bold ${headingColor} block mt-0.5`}>10–200 location chains, DACH + EU</span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 block">TARGET</span>
+              <span className={`text-xs md:text-sm font-bold ${headingColor} block mt-0.5`}>UK & Ireland multi-site operators, 10–200 locations</span>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
   // Slide 2: Agenda
   if (slideId === 2) {
     const agendaItems = [
-      { num: '01', icon: Award, title: 'Who I am and the bet', desc: '10+ SQLs in 60 days, the proof and the wager' },
+      { num: '01', icon: Award, title: 'Who I am and the bet', desc: '10+ qualified demos in 60 days, the proof and the wager' },
       { num: '02', icon: Search, title: 'Diagnostic and Competition', desc: 'What 2 hours of public research already found' },
       { num: '03', icon: Target, title: 'ICP and Target Accounts', desc: 'Exactly who I would call and why them first' },
       { num: '04', icon: TrendingUp, title: 'The Funnel and Unit Economics', desc: 'Reverse-engineered math from assumed ACV' },
@@ -241,20 +241,16 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
               THE 60-DAY PERFORMANCE CONTRACT
             </div>
             <h3 className={`text-lg md:text-xl font-black ${headingColor} leading-snug`}>
-              Target: 10+ Sales Qualified Leads in 60 days. If I miss by week 4, we reassess fit.
+              Target: 10+ qualified demos booked in 60 days. If I miss by week 4, we reassess fit.
             </h3>
             <p className="text-xs text-slate-500 font-medium">
               No severance conversation needed. I carry the quota, not the excuse.
             </p>
 
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 text-left grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 text-left grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
                 <span className="text-slate-400 font-mono block text-[10px]">EDUCATION</span>
                 <span className={`font-semibold ${headingColor} block mt-0.5 text-xs`}>M.Sc. BI & Data Science, ISM Munich (June 2026)</span>
-              </div>
-              <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
-                <span className="text-slate-400 font-mono block text-[10px]">LANGUAGES</span>
-                <span className={`font-semibold ${headingColor} block mt-0.5 text-xs`}>English C2 · German A2→B1</span>
               </div>
               <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
                 <span className="text-slate-400 font-mono block text-[10px]">TOOLS</span>
@@ -283,33 +279,33 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
             <div className={`p-4 rounded-2xl ${cardBg} border space-y-2 relative`}>
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400">01</span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 border border-amber-500/20 font-bold">INSIGHT 1</span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 border border-amber-500/20 font-bold">OBSERVATION 1</span>
               </div>
-              <h3 className={`font-bold text-sm ${headingColor}`}>Hospitality-Only Proof</h3>
+              <h3 className={`font-bold text-sm ${headingColor}`}>Proof Is Deep In Food, Thin In Retail</h3>
               <p className={`text-xs ${subTextColor} leading-relaxed`}>
-                Every named case study (World of Pizza, Concept Family, Kaimug) is hospitality. Retail and food production are open territory with zero public logos yet.
+                Every public case study — World of Pizza, Concept Family, Kaimug, Wiki Wiki Poke — is food service. Retail and food production have industry pages but no named logos yet. That's open outbound territory.
               </p>
             </div>
 
             <div className={`p-4 rounded-2xl ${cardBg} border space-y-2 relative`}>
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400">02</span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 font-bold">INSIGHT 2</span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 font-bold">OBSERVATION 2</span>
               </div>
-              <h3 className={`font-bold text-sm ${headingColor}`}>Pricing Is Fully Gated</h3>
+              <h3 className={`font-bold text-sm ${headingColor}`}>Tiers Are Public, Prices Aren't</h3>
               <p className={`text-xs ${subTextColor} leading-relaxed`}>
-                No self-serve tier; every deal starts as a sales conversation. Great for a fast-qualifying SDR who can book high-intent meetings quickly.
+                Operations Suite and Enterprise are published with a full feature comparison and a public ROI calculator — but no self-serve tier. Every deal starts as a conversation. Ideal for a fast qualifier, impossible to scale on volume alone.
               </p>
             </div>
 
             <div className={`p-4 rounded-2xl ${cardBg} border space-y-2 relative`}>
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400">03</span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 border border-blue-500/20 font-bold">INSIGHT 3</span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 border border-blue-500/20 font-bold">OBSERVATION 3</span>
               </div>
-              <h3 className={`font-bold text-sm ${headingColor}`}>Founder-Led, DACH-Only So Far</h3>
+              <h3 className={`font-bold text-sm ${headingColor}`}>Proven In DE/AT/NL. Zero Logos In UK & Ireland</h3>
               <p className={`text-xs ${subTextColor} leading-relaxed`}>
-                Current logos were closed founder-led in German. English market is untouched. My job: prove outbound converts in English independently.
+                Bounti already runs multi-country — Wiki Wiki Poke spans the Netherlands and Germany, another customer spans Austria and Germany. The gap isn't 'outside Germany', it's the UK and Ireland, where none of these logos carry weight with a local ops director. That's the gap I'd own.
               </p>
             </div>
           </div>
@@ -373,7 +369,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
 
           <div className="mt-3 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-700 dark:text-emerald-300 flex items-center gap-2">
             <Sparkles className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-            <span><strong>Bounti's moat:</strong> Training, audits, checklists, comms & AI course creation in one system. The only stack in this quadrant with paying multi-location logos.</span>
+            <span><strong>Bounti's moat:</strong> Training, audits, checklists, comms & AI course creation in one system. The only stack in this quadrant with paying multi-location logos.<br /><span className="text-[11px] text-slate-500 dark:text-slate-400 font-normal block mt-1">Note: in the UK the comparison set is different — I'd map the local incumbents in week one before a single call.</span></span>
           </div>
         </div>
       </div>
@@ -417,34 +413,34 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
                 <Globe2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <div>
                   <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold block">GEOGRAPHY</span>
-                  <span className={`text-xs md:text-sm font-bold ${headingColor}`}>DACH (proven) → English-speaking EU</span>
+                  <span className={`text-xs md:text-sm font-bold ${headingColor}`}>DE/AT/NL (proven) → UK & Ireland (my mandate)</span>
                 </div>
               </div>
             </div>
 
             {/* Right: Target Categories */}
-            <div className="space-y-2.5">
-              <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block font-bold">ILLUSTRATIVE TARGET CATEGORIES</span>
-              <div className={`p-3 rounded-xl ${cardBg} border`}>
-                <h4 className={`text-xs md:text-sm font-bold ${headingColor} flex items-center gap-1.5`}>
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+            <div className="space-y-2 gap-2 grid grid-cols-1">
+              <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block font-bold">ILLUSTRATIVE TARGET CATEGORIES & UK WEDGES</span>
+              <div className={`p-2.5 rounded-xl ${cardBg} border`}>
+                <h4 className={`text-xs font-bold ${headingColor} flex items-center gap-1.5`}>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                   QSR & Franchise Chains
                 </h4>
-                <p className={`text-xs ${subTextColor} mt-1`}>Regional pizza, burger, and bakery franchises expanding past 10 sites (World of Pizza profile).</p>
+                <p className={`text-[11px] ${subTextColor} mt-0.5`}>Regional pizza, burger, and bakery franchises expanding past 10 sites (World of Pizza profile).</p>
               </div>
-              <div className={`p-3 rounded-xl ${cardBg} border`}>
-                <h4 className={`text-xs md:text-sm font-bold ${headingColor} flex items-center gap-1.5`}>
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  Fitness & Gym Chains
+              <div className={`p-2.5 rounded-xl ${cardBg} border`}>
+                <h4 className={`text-xs font-bold ${headingColor} flex items-center gap-1.5`}>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  Why UK Frontline Converts
                 </h4>
-                <p className={`text-xs ${subTextColor} mt-1`}>Multi-club operators needing consistent trainer certification across locations.</p>
+                <p className={`text-[11px] ${subTextColor} mt-0.5`}>135-language auto-translation is Bounti's sharpest UK wedge. British hospitality frontline is heavily non-native-English — the same product feature that solves German labour shortages solves a bigger problem in London.</p>
               </div>
-              <div className={`p-3 rounded-xl ${cardBg} border`}>
-                <h4 className={`text-xs md:text-sm font-bold ${headingColor} flex items-center gap-1.5`}>
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  Retail & Convenience Chains
+              <div className={`p-2.5 rounded-xl ${cardBg} border`}>
+                <h4 className={`text-xs font-bold ${headingColor} flex items-center gap-1.5`}>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  Enterprise-Ready Out Of The Box
                 </h4>
-                <p className={`text-xs ${subTextColor} mt-1`}>High staff turnover, requiring fast mobile onboarding & compliance tracking.</p>
+                <p className={`text-[11px] ${subTextColor} mt-0.5`}>ISO-27001 certified, GDPR-compliant, EU infrastructure, built in Germany. Removes the security objection before procurement raises it.</p>
               </div>
             </div>
           </div>
@@ -455,7 +451,9 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
 
   // Slide 8: The Funnel Math
   if (slideId === 8) {
-    const calculatedDemos = Math.round(scenario.calls * (scenario.callToDemoRate / 100));
+    const connects = scenario.calls >= 10000 ? Math.round(scenario.calls * 0.15) : scenario.calls;
+    const dials = scenario.calls >= 10000 ? scenario.calls : Math.round(scenario.calls / 0.15);
+    const calculatedDemos = Math.round(connects * (scenario.callToDemoRate / 100));
     const calculatedDeals = Math.round(calculatedDemos * (scenario.demoToDealRate / 100));
     const calculatedARR = calculatedDeals * scenario.avgDealSize;
 
@@ -465,47 +463,71 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
           <div className="flex items-center justify-between">
             <span className="text-xs font-mono tracking-wider text-emerald-600 dark:text-emerald-400 font-bold uppercase">04 — THE FUNNEL</span>
             <span className="text-[10px] font-mono px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-bold">
-              Live Model Adjusted
+              Reverse-Engineered Model
             </span>
           </div>
-          <h2 className={`text-xl md:text-2xl font-extrabold ${headingColor} mt-0.5 mb-4`}>Reverse-engineered revenue math</h2>
+          <h2 className={`text-xl md:text-2xl font-extrabold ${headingColor} mt-0.5 mb-2`}>Reverse-engineered revenue math</h2>
+
+          {/* Headline Strip */}
+          <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs font-bold text-emerald-800 dark:text-emerald-300 mb-3 flex items-center justify-between">
+            <span>Built backwards from 4 demos a week — not forwards from a dial target.</span>
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-600 text-white font-extrabold uppercase">BACKWARDS FUNNEL</span>
+          </div>
 
           {/* Funnel Progress Visual */}
           <div className="space-y-3">
             {/* Stage 1 */}
             <div className={`p-3.5 rounded-xl ${cardBg} border`}>
               <div className="flex justify-between items-center text-xs font-mono text-slate-400 mb-1">
-                <span className="font-bold">STAGE 01 — Cold Calls & Outbound Touches</span>
-                <span className="font-extrabold text-emerald-600 dark:text-emerald-400">{scenario.calls.toLocaleString()} CALLS</span>
+                <span className="font-bold">STAGE 01 — Named Account Universe</span>
+                <span className="font-extrabold text-emerald-600 dark:text-emerald-400">~1,200 UK & IE chains, ~3,500 contacts</span>
               </div>
               <div className="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
                 <div className="bg-emerald-500 h-full rounded-full w-full"></div>
               </div>
-              <span className="text-[10px] text-slate-500 mt-1 block">100 calls / SDR day baseline</span>
+              <span className="text-[10px] text-slate-500 mt-1 block">Coverage, not volume. This TAM cannot absorb 100 dials a day without burning out in a quarter.</span>
             </div>
 
             {/* Stage 2 */}
-            <div className={`p-3.5 rounded-xl ${cardBg} border`}>
+            <div className={`p-3.5 rounded-xl ${cardBg} border relative`}>
               <div className="flex justify-between items-center text-xs font-mono text-slate-400 mb-1">
-                <span className="font-bold">STAGE 02 — Qualified Demos Scheduled ({scenario.callToDemoRate}% hook)</span>
-                <span className="font-extrabold text-emerald-600 dark:text-emerald-400">{calculatedDemos} DEMOS</span>
+                <span className="font-bold">STAGE 02 — Dials & Connects</span>
+                <span className="font-extrabold text-emerald-600 dark:text-emerald-400">~{dials.toLocaleString()} dials → ~{connects.toLocaleString()} connects (15%)</span>
               </div>
               <div className="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                <div className="bg-emerald-500 h-full rounded-full" style={{ width: `${Math.min(scenario.callToDemoRate * 4, 100)}%` }}></div>
+                <div className="bg-emerald-500 h-full rounded-full w-[65%]"></div>
               </div>
-              <span className="text-[10px] text-slate-500 mt-1 block">1 in {Math.round(100 / scenario.callToDemoRate)} calls → Demo</span>
+              <span className="text-[10px] text-slate-500 mt-1 block">~75 dials/day, ~50 when multi-channel.</span>
             </div>
 
             {/* Stage 3 */}
-            <div className={`p-3.5 rounded-xl ${cardBg} border`}>
+            <div className={`p-3.5 rounded-xl ${cardBg} border relative`}>
               <div className="flex justify-between items-center text-xs font-mono text-slate-400 mb-1">
-                <span className="font-bold">STAGE 03 — Closed-Won Revenue ({scenario.demoToDealRate}% win rate)</span>
+                <span className="font-bold flex items-center gap-2">
+                  STAGE 03 — Qualified Demos Booked ({scenario.callToDemoRate}% of connects)
+                  <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold uppercase">MY QUOTA</span>
+                </span>
+                <span className="font-extrabold text-emerald-600 dark:text-emerald-400">{calculatedDemos} DEMOS BOOKED / YR</span>
+              </div>
+              <div className="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                <div className="bg-emerald-500 h-full rounded-full w-[40%]"></div>
+              </div>
+              <span className="text-[10px] text-slate-500 mt-1 block">200 qualified demos booked per year — 4 per week.</span>
+            </div>
+
+            {/* Stage 4 */}
+            <div className={`p-3.5 rounded-xl ${cardBg} border relative`}>
+              <div className="flex justify-between items-center text-xs font-mono text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-2">
+                  STAGE 04 — Closed Deals & ARR ({scenario.demoToDealRate}% AE win rate)
+                  <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold uppercase">AE OWNED</span>
+                </span>
                 <span className="font-extrabold text-emerald-600 dark:text-emerald-400">{calculatedDeals} DEALS (€{calculatedARR.toLocaleString()} ARR)</span>
               </div>
               <div className="w-full bg-slate-200 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                <div className="bg-emerald-500 h-full rounded-full" style={{ width: `${Math.min(scenario.callToDemoRate * (scenario.demoToDealRate / 100) * 4, 100)}%` }}></div>
+                <div className="bg-emerald-500 h-full rounded-full w-[25%]"></div>
               </div>
-              <span className="text-[10px] text-slate-500 mt-1 block">€{scenario.avgDealSize.toLocaleString()} ACV assumption</span>
+              <span className="text-[10px] text-slate-500 mt-1 block">50 deals closed (25% AE win rate) · €{scenario.avgDealSize.toLocaleString()} ACV assumption.</span>
             </div>
           </div>
         </div>
@@ -515,17 +537,22 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
 
   // Slide 9: Unit Economics
   if (slideId === 9) {
+    const connects = scenario.calls >= 10000 ? Math.round(scenario.calls * 0.15) : scenario.calls;
+    const demos = Math.round(connects * (scenario.callToDemoRate / 100));
+    const deals = Math.round(demos * (scenario.demoToDealRate / 100));
+    const arr = deals * scenario.avgDealSize;
+
     return (
       <div className="p-5 md:p-8 space-y-4">
         <div>
           <span className="text-xs font-mono tracking-wider text-emerald-600 dark:text-emerald-400 font-bold uppercase">04 — UNIT ECONOMICS</span>
-          <h2 className={`text-xl md:text-2xl font-extrabold ${headingColor} mt-0.5 mb-4`}>The math behind the €300K</h2>
+          <h2 className={`text-xl md:text-2xl font-extrabold ${headingColor} mt-0.5 mb-3`}>The math behind the pipeline</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
-            <div className={`p-4 rounded-2xl ${cardBg} border text-center`}>
-              <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400 block">€300K</span>
-              <span className={`text-xs font-bold ${headingColor} block mt-0.5`}>ARR / rep / year</span>
-              <span className="text-[10px] text-slate-500 block">× €6K ACV, SDR pipeline</span>
+            <div className={`p-4 rounded-2xl ${cardBg} border text-center relative`}>
+              <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400 block">€{arr.toLocaleString()}</span>
+              <span className={`text-xs font-bold ${headingColor} block mt-0.5`}>ARR sourced / year (AE-closed)</span>
+              <span className="text-[10px] text-slate-500 block">200 qualified demos × 25% win rate × €{scenario.avgDealSize.toLocaleString()} ACV</span>
             </div>
             <div className={`p-4 rounded-2xl ${cardBg} border text-center`}>
               <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400 block">€1,000</span>
@@ -540,6 +567,18 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
           </div>
 
           <div className={`p-4 rounded-2xl ${cardBg} border space-y-3`}>
+            <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300">
+              <p className="font-semibold italic leading-relaxed">
+                "€6K is my assumption, not their number. I couldn't find published pricing. If the real ACV is €15K, this same funnel produces €750K — the model recalculates live."
+              </p>
+              <button 
+                onClick={onOpenModeler}
+                className="mt-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer"
+              >
+                Change the ACV yourself →
+              </button>
+            </div>
+
             <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block font-bold">COST-PER-LEAD BREAKDOWN INFOGRAPHIC</span>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-2 text-center">
               <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
@@ -555,8 +594,8 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
                 <span className="text-[10px] text-slate-500 block">CAC</span>
               </div>
               <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
-                <span className="text-base font-bold text-emerald-600 dark:text-emerald-400 block">€6,000</span>
-                <span className="text-[10px] text-slate-500 block">ACV</span>
+                <span className="text-base font-bold text-emerald-600 dark:text-emerald-400 block">€{scenario.avgDealSize.toLocaleString()}</span>
+                <span className="text-[10px] text-slate-500 block">ACV (Assumption)</span>
               </div>
               <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
                 <span className="text-base font-bold text-emerald-600 dark:text-emerald-400 block">3 yr</span>
@@ -633,7 +672,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
             Instead of spraying cold calls, we reach out when training is an active operational headache.
           </p>
 
-          {/* Infographic Grid of Triggers */}
+          {/* Infographic Grid of Triggers + Indeed Mock Card */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {triggers.map((t) => {
               const IconComp = t.icon;
@@ -665,6 +704,26 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
                 </div>
               );
             })}
+
+            {/* Indeed Job Posting Mock Card */}
+            <div className={`p-3.5 rounded-2xl bg-slate-900 text-slate-100 border border-slate-700 flex flex-col justify-between space-y-2 relative overflow-hidden shadow-lg`}>
+              <div className="flex items-center justify-between">
+                <span className="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1">
+                  <Briefcase className="w-3 h-3 text-emerald-400" /> INDEED JOB POST MOCK
+                </span>
+                <span className="text-[9px] font-mono text-slate-400">TRIGGER EXAMPLE</span>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] text-slate-400 block font-mono">Regional QSR Group · Manchester, UK</span>
+                <h4 className="font-bold text-xs text-white">Area Operations Manager</h4>
+                <p className="text-[10px] text-slate-300 leading-tight italic">
+                  "We're opening our 18th site and need someone to own daily operations, staff onboarding and quality standards across the region."
+                </p>
+              </div>
+              <div className="pt-2 border-t border-slate-800 text-[10px] text-emerald-400 font-mono font-semibold">
+                → BOUNTI SIGNAL: 18th site opening = onboarding bottleneck. Dial Ops Director immediately.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -674,10 +733,10 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
   // Slide 11: The Sequence
   if (slideId === 11) {
     const cadenceSteps = [
-      { day: 'Day 0', channel: 'LinkedIn Connect', icon: Linkedin, text: '“Congrats on the 15th location!”' },
-      { day: 'Day 2', channel: 'Cold Email + Case Study', icon: Mail, text: 'How World of Pizza cut training costs 68%' },
+      { day: 'Day 0', channel: 'LinkedIn Connect', icon: Linkedin, text: '“Congrats on the 18th location!”' },
+      { day: 'Day 2', channel: 'Cold Email + Case Study', icon: Mail, text: 'Email + case study — 600 employees, one standard (World of Pizza).' },
       { day: 'Day 5', channel: 'Cold Call', icon: Phone, text: 'The trigger phone hook (see next slide)' },
-      { day: 'Day 8', channel: 'Voice Note / WhatsApp', icon: Mic, text: '30-second founder audio social proof' },
+      { day: 'Day 8', channel: 'Voice Note / WhatsApp', icon: Mic, text: 'Voice note from the AE or founder — 30 seconds of operator social proof.' },
       { day: 'Day 12', channel: 'Breakup Email', icon: FileText, text: '“Still opening new locations?”' },
     ];
 
@@ -765,14 +824,14 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
                     <span className="text-slate-400">Target: Multi-Location Ops Director</span>
                   </div>
                   <p className={`text-xs md:text-sm ${headingColor} leading-relaxed font-sans`}>
-                    "Hi [Name], I saw [Chain] just opened its <strong className="text-emerald-600 dark:text-emerald-400">[15th location in Munich]</strong> — congrats.<br /><br />
-                    Quick one: when a new site opens, how are you <strong className="text-emerald-600 dark:text-emerald-400">[getting every hire trained to standard]</strong> as fast as your best location?<br /><br />
-                    Most ops leads I speak with are still relying on <strong className="text-emerald-600 dark:text-emerald-400">[PDFs and WhatsApp groups.]</strong><br /><br />
-                    That's exactly the gap Bounti closes for teams <strong className="text-emerald-600 dark:text-emerald-400">[like World of Pizza.]</strong> Worth 15 minutes?"
+                    "Hi [Name], I saw [Chain] just opened its <strong className="text-emerald-600 dark:text-emerald-400">18th site in Manchester</strong> — congrats.<br /><br />
+                    Quick one: when a new site opens, how are you <strong className="text-emerald-600 dark:text-emerald-400">getting every hire trained to standard as fast as your best location</strong>?<br /><br />
+                    Most ops leads I speak with are still relying on <strong className="text-emerald-600 dark:text-emerald-400">PDFs and WhatsApp groups.</strong><br /><br />
+                    That's exactly the gap Bounti closes for teams <strong className="text-emerald-600 dark:text-emerald-400">like a 30-site delivery group in Germany.</strong> Worth 15 minutes?"
                   </p>
                   <div className="pt-2 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-1.5 text-[10px] text-slate-500">
                     <span>✓ References real expansion signal</span>
-                    <span>✓ Names actual case study</span>
+                    <span>✓ Sizes the proof to the prospect, not the logo.</span>
                     <span>✓ Highlights paper/PDF pain</span>
                     <span>✓ Low-friction 15 min ask</span>
                   </div>
@@ -863,7 +922,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
                     <strong className="text-emerald-600 dark:text-emerald-400">15%</strong>
                   </div>
                   <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
-                    <span>Demo Booked</span>
+                    <span>Demo per Connect</span>
                     <strong className="text-emerald-600 dark:text-emerald-400">8%</strong>
                   </div>
                   <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
@@ -899,7 +958,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
             <div className={`p-3.5 rounded-xl ${cardBg} border space-y-1.5`}>
               <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400">WEEK 1–3</span>
               <h4 className={`text-xs md:text-sm font-bold ${headingColor}`}>SHADOW & BUILD</h4>
-              <p className={`text-xs ${subTextColor}`}>Shadow 5 live demos with Deniz/Ziar. Build a 100-account target list by hand from Google Maps + LinkedIn.</p>
+              <p className={`text-xs ${subTextColor}`}>Shadow 5 live demos with the AE team and founders. Build 100-account target list from UK and Ireland (Google Maps + LinkedIn).</p>
             </div>
             <div className={`p-3.5 rounded-xl ${cardBg} border space-y-1.5`}>
               <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400">WEEK 4–6</span>
@@ -914,7 +973,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
             <div className={`p-3.5 rounded-xl ${cardBg} border space-y-1.5`}>
               <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400">WEEK 10–12</span>
               <h4 className={`text-xs md:text-sm font-bold ${headingColor}`}>PLAYBOOK & SCALE</h4>
-              <p className={`text-xs ${subTextColor}`}>Document v1 playbook for Deniz/Ziar. Sponsor 1 franchise meetup. Target: 10 SQLs in 60 days.</p>
+              <p className={`text-xs ${subTextColor}`}>Document the v1 UK playbook and hand it to the AE team. Target: 10+ qualified demos booked in 60 days.</p>
             </div>
           </div>
         </div>
@@ -944,10 +1003,11 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
             <div className={`p-4 rounded-2xl ${cardBg} border space-y-2.5`}>
               <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block font-bold">NORTH STAR METRICS</span>
               <div className="space-y-2 text-xs">
-                <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50"><span>Calls & Connects / Day</span><strong className="text-emerald-600 dark:text-emerald-400">12+ calls · 8+ connects</strong></div>
-                <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50"><span>Call → Demo Conversion</span><strong className="text-emerald-600 dark:text-emerald-400">8% → target 10%</strong></div>
+                <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50"><span>Dials & Connects / Day</span><strong className="text-emerald-600 dark:text-emerald-400">75 dials · 11 connects</strong></div>
+                <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50"><span>Demo per Connect Rate</span><strong className="text-emerald-600 dark:text-emerald-400">8% → target 10%</strong></div>
                 <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50"><span>Demo → Close Conversion</span><strong className="text-emerald-600 dark:text-emerald-400">25% → target 30%</strong></div>
-                <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50"><span>Weekly New ARR Sourced</span><strong className="text-emerald-600 dark:text-emerald-400">€6K/close → target €12K/wk</strong></div>
+                <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50"><span>Weekly Qualified Demos Booked</span><strong className="text-emerald-600 dark:text-emerald-400">4/wk → target 6/wk</strong></div>
+                <div className="flex justify-between p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50 text-[11px]"><span>Weekly ARR Sourced (Secondary)</span><strong className="text-slate-500">€6K/close → target €12K/wk</strong></div>
               </div>
             </div>
           </div>
@@ -973,13 +1033,13 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
           <div className={`p-4 rounded-2xl ${cardBg} border space-y-1.5`}>
             <span className="text-xl font-black font-mono text-emerald-600 dark:text-emerald-400">02</span>
             <h3 className={`font-bold text-sm ${headingColor}`}>Proven Motion</h3>
-            <p className={`text-xs ${subTextColor}`}>World of Pizza & Concept Family prove multi-location product-market fit. I scale it to English markets.</p>
+            <p className={`text-xs ${subTextColor}`}>World of Pizza, Concept Family, Kaimug, Wiki Wiki Poke — Bounti already closes multi-location chains. My job is to build the repeatable engine that keeps the AE team closing instead of sourcing.</p>
           </div>
 
           <div className={`p-4 rounded-2xl ${cardBg} border space-y-1.5`}>
             <span className="text-xl font-black font-mono text-emerald-600 dark:text-emerald-400">03</span>
             <h3 className={`font-bold text-sm ${headingColor}`}>The 60-Day Bet</h3>
-            <p className={`text-xs ${subTextColor}`}>10+ SQLs in 60 days. I have carried quotas across 80+ countries with zero inbound.</p>
+            <p className={`text-xs ${subTextColor}`}>10+ qualified demos in 60 days. I have carried quotas across 80+ countries with zero inbound.</p>
           </div>
         </div>
 
