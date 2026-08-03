@@ -1,7 +1,7 @@
-export type ActiveTab = 'pitch-deck' | 'strategy-dashboard' | 'candidate-cv' | 'ask-ai';
+export type ActiveTab = 'pitch-deck' | 'strategy-dashboard' | 'candidate-cv';
 export type NavTab = ActiveTab;
 
-export type StrategySubTab = 'territory-map' | 'revenue-simulator' | 'challenger-matrix' | 'target-accounts' | 'plan-roi';
+export type StrategySubTab = 'territory-map' | 'challenger-matrix' | 'target-accounts' | 'plan-roi';
 
 export interface SlideData {
   id: number;

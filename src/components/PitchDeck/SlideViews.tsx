@@ -239,14 +239,11 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
           <div className={`p-5 md:p-6 rounded-2xl ${cardBg} border text-center space-y-3.5 max-w-2xl mx-auto shadow-md relative overflow-hidden`}>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-bold">
               <Zap className="w-3.5 h-3.5" />
-              THE 60-DAY PERFORMANCE CONTRACT
+              THE 60-DAY PERFORMANCE PROPOSAL
             </div>
             <h3 className={`text-lg md:text-xl font-black ${headingColor} leading-snug`}>
               Target: 10+ qualified demos booked in 60 days. If I miss by week 4, we reassess fit.
             </h3>
-            <p className="text-xs text-slate-500 font-medium">
-              No severance conversation needed. I carry the quota, not the excuse.
-            </p>
 
             <div className="pt-4 border-t border-slate-200 dark:border-slate-800 text-left grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800/50">
@@ -261,7 +258,7 @@ export const SlideRenderer: React.FC<SlideViewProps> = ({ slideId, scenario, the
           </div>
 
           <p className="text-xs text-slate-500 text-center mt-4 italic">
-            If the conversion is off by week 4, we review data together and decide the next move transparently.
+            If the conversion is off by week 4, we review data together and decide the next move mutually.
           </p>
         </div>
       </div>

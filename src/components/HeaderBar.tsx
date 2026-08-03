@@ -3,7 +3,6 @@ import {
   Presentation, 
   BarChart3, 
   UserCheck, 
-  Bot, 
   Maximize2,
   Minimize2,
   ChevronRight,
@@ -76,18 +75,6 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
           >
             <UserCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <span>Candidate CV</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('ask-ai')}
-            className={`flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold transition-all whitespace-nowrap ${
-              activeTab === 'ask-ai'
-                ? 'bg-emerald-600 text-white shadow-sm'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
-            }`}
-          >
-            <Bot className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-300" />
-            <span>Ask Nish's (AI)</span>
           </button>
         </nav>
 

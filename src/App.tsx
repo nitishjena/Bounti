@@ -3,7 +3,6 @@ import { HeaderBar } from './components/HeaderBar';
 import { PitchDeckSection } from './components/PitchDeck/PitchDeckSection';
 import { StrategyDashboardSection } from './components/StrategyDashboard/StrategyDashboardSection';
 import { CandidateCVSection } from './components/CandidateCV/CandidateCVSection';
-import { AskAISection } from './components/AskAI/AskAISection';
 import { ScenarioDrawer } from './components/ScenarioDrawer';
 import { ScenarioModel, NavTab } from './types';
 
@@ -99,10 +98,6 @@ export default function App() {
           <CandidateCVSection />
         )}
 
-        {activeTab === 'ask-ai' && (
-          <AskAISection />
-        )}
-
         {/* Global Funnel Modeler Drawer */}
         {showScenarioDrawer && (
           <ScenarioDrawer
@@ -122,7 +117,7 @@ export default function App() {
             <span>Prepared for <strong className="text-slate-900 font-sans font-bold">Bounti (Berlin) Leadership Team</strong></span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-emerald-700 font-semibold font-sans">Nish Jena · GTM Lead Candidate</span>
+            <span className="text-emerald-700 font-semibold font-sans">Nish Jena / SDR-Growth Candidate</span>
             <span>•</span>
             <span>nitish.2024@gmail.com</span>
           </div>

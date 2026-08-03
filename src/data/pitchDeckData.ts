@@ -27,7 +27,7 @@ export const PITCH_SLIDES: SlideData[] = [
     chapter: "01 — THE BET",
     title: "Here is what I am willing to wager",
     subtitle: "Carrying the number, not the excuse.",
-    speakerNotes: "I put my money where my mouth is. Target: 10+ qualified demos booked in 60 days. If I miss by week 4, we review data together and reassess fit. No severance conversation needed — I carry the quota."
+    speakerNotes: "I put my money where my mouth is. Target: 10+ qualified demos booked in 60 days. If I miss by week 4, we review data together and reassess fit — I carry the quota."
   },
   {
     id: 5,

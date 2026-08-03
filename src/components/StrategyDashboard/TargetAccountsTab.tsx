@@ -32,7 +32,7 @@ export const TargetAccountsTab: React.FC = () => {
           `When you open a new site, how are you ensuring every new hire is trained to the same standard as your top location?\n\n` +
           `Most ops directors I speak with are still using printed PDFs and WhatsApp groups. Bounti cuts frontline onboarding time by 68% with instant AI course creation and daily shift checklists (proven with World of Pizza).\n\n` +
           `Worth 10 minutes next Tuesday?\n\n` +
-          `Best,\nNish Jena\nGTM Lead, Bounti (Berlin)`;
+          `Best,\nNish Jena\nSDR / Growth Candidate, Bounti (Berlin)`;
       } else if (outreachTone === 'executive') {
         return `Subject: Frontline consistency across ${account.name}'s ${account.locationsCount} locations\n\n` +
           `Hi ${account.contactTitle.split(' ')[0]},\n\n` +
